@@ -3,24 +3,32 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ user, username, handleLogout }) => {
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-teal-500 p-4">
+    <nav className="bg-gradient-to-r from-blue-500 to-teal-500 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
 
-            <span className="text-white font-bold text-xl">
-              <span className="text-2xl">Y</span>
-              <span className="text-xl ml-1">A</span>
-              <span className="text-2xl ml-1">M</span>
-              <span className="text-xl ml-1">A</span>
+            <span className="text-white font-bold text-2xl">
+              <span className="text-3xl">Y</span>
+              <span className="text-2xl ml-1">A</span>
+              <span className="text-3xl ml-1">M</span>
+              <span className="text-2xl ml-1">A</span>
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/" className="text-white hover:text-gray-200 font-medium">Home</Link>
-            <Link to="/destinations" className="text-white hover:text-gray-200 font-medium">Destinations</Link>
-            <Link to="/about" className="text-white hover:text-gray-200 font-medium">About</Link>
-            <Link to="/contact" className="text-white hover:text-gray-200 font-medium">Contact</Link>
-            {user ? (
+            <Link to="/" className="text-white hover:text-gray-200 font-medium p-2">
+              Home
+            </Link>
+            <Link to="/destinations" className="text-white hover:text-gray-200 font-medium p-2">
+              Destinations
+            </Link>
+            <Link to="/about" className="text-white hover:text-gray-200 font-medium p-2">
+              About
+            </Link>
+            <Link to="/contact" className="text-white hover:text-gray-200 font-medium p-2">
+              Contact
+            </Link>
+            {user? (
               <div className="relative group">
                 <div className="flex flex-col group relative text-white text-xs p-2 mx-1 cursor-pointer hover:outline outline-1">
                   <p className="font-medium">Hello, {username}</p>
